@@ -1,0 +1,30 @@
+	<div align = "center">
+		<form method = "GET" action = "/movies">
+			Director: <input type = "text" name = "director">
+			<input type = "submit">
+		</form>
+
+		<form method = "POST" action = "/movies">
+		Director: <input type = "text" name = "director">
+		Movie: <input type = "text", name = "movie">
+		<input type = "submit">
+	</div>
+
+
+<p>
+	<table border = "1" align = "center">
+		 <tr>
+   	<th>Title</th>
+   	<th>Year</th>
+   	<th>Director</th>
+ 		</tr>
+	  	{{#each movies}}
+			  <tr>
+			  	<td>{{ title }}</td>
+			  	<td> {{ year }} </td>
+			  	<td> {{ director }} </td>
+			  </tr>
+			{{/each}}
+		</tr>
+	</table>
+</p>

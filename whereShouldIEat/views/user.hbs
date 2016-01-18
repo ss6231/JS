@@ -1,0 +1,40 @@
+<head>
+	{{#if user}}
+		<h1>Hi, {{user.username}}! </h1>
+	{{else}}
+		<h1>Hi!</h1>
+	{{/if}}
+	<div id = "alreadyUsed">
+		{{#if message}}
+			<h4>{{message}}</h4>
+		{{/if}}
+		<div id = "notFound">
+			{{#if notFound}}
+				<h4>{{notFound}}</h4>
+			{{/if}}
+		</div>
+	</div>
+</head>
+<body>
+		{{#if user.restaurants}}
+		<h2>Your previous picks:</h2>
+			{{#each user.restaurants}}
+				<h4>
+					<div class = "divContainer">
+						<li>
+						<div class = "restName">
+							<a href = {{website}}>{{name}}</a>
+						</div>
+						<div class = "deleteRest">
+							<a href = "#"> [x]</a>
+						</div>
+						</li>
+					</div>
+				</h4>
+			{{/each}}
+		{{/if}}
+	<form action="/pickforme", id = "noLogin">
+	   <input type="submit" class="btn btn-custom" value="Pick a new spot">
+	</form>
+	<script src = "/javascripts/myAjax.js"></script>
+</body>

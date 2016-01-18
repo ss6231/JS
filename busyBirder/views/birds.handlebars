@@ -1,0 +1,17 @@
+<h3>List of Birds</h3>
+<body>
+		<br>
+		{{#each birdList}}
+			<li><span style = "color: red">{{seen}}</span> x {{name}}</li>
+		{{/each}}
+		<br>
+		<br>
+		<form method="POST" action="birds">
+			<div><textarea name = "newBird"></textarea></div>
+			<br>
+			<div><input name = "submit" type="submit" value = "Add another bird"></div>
+		</form>
+		<br>
+	<a style = "color: yellow" href = "/settings"> (My Settings) </a>
+</body>
+

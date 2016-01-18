@@ -1,0 +1,24 @@
+
+<head>
+	<h1>Register</h1>	
+</head>
+<body>
+  <div id = "errorMessage">
+    {{#if message}}
+      <h4>{{message}}</h4>
+    {{/if}}
+  </div>
+  <div id = "containerLogin">
+    <form role="form" method = "POST" action = "">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input name = "username" type="username" class="form-control" id="username">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input name = "password" type="password" class="form-control" id="pwd">
+      </div>
+      <button type="submit" class="btn btn-custom" id = "loginBtn">Submit</button>
+    </form>
+  </div>
+</body>

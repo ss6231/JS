@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h1>I Wanna Pick My Own Specifications, Damnit</h1>
+
+	<div id = "notFound">
+		{{#if notFound}}
+			<h4>{{notFound}}</h4>
+		{{/if}}
+	</div>
+	<div class="formContainer" align = "center">
+	  <form id = "myForm" method="GET" action "/pickforme">
+	      <select class="form-control1" id="sel1" name = "neighborhood">
+	        <option>Neighborhood</option>
+	        {{#each neighborhoods}}
+	       	 <option> {{this}} </option>
+	       	{{/each}}
+	      </select>
+	      <select class="form-control2" id="sel2" name = "cuisine">
+	        <option>Cuisine</option>
+	        {{#each cuisine}}
+	        <option>{{this}}</option>
+	        {{/each}}
+	      </select>
+	      <select class="form-control3" id="sel3" name = "price">
+	        <option>Price</option>
+	        {{#each price}}
+	        <option>{{this}}</option>
+	        {{/each}}
+	      </select>
+	      <br>
+	      <input type="submit" class="btn btn-custom" value="Go">
+	  </form>
+	</div>
+	 <h1>Nah. Just Pick For Me Already</h1>
+	 <div id = "noSpecs">
+	 	<form action="/results">
+			<input type="submit" class="btn btn-custom" value="I'm feelin' lucky">
+		</form>
+	</div>
+</body>
+</html>

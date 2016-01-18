@@ -1,0 +1,22 @@
+* {
+	font-family: georgia;
+	background: #000033;
+}
+body {
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+}
+
+textarea {
+	background-color: white;
+	width: 15em;  height: 1.5em;
+	font-size: 15px;
+}
+
+input {
+	background: white;
+	width: 10em;  height: 2em;
+	color: black;
+	font-size: .7em
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <div id = "userHeader">
+  	{{#if user}}
+			<h4><a href = "/user/{{user.slug}}">Home </a> | Logged in as: {{user.username}} <a href = "/logout">(logout)</a></h4>
+    {{else}}
+      <h4><a href = "/">Home </a> | <a href = "/login">Login</a> | <a href = "/register">Register</a></h4>
+    {{/if}}
+  </div>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css'/>
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+</html>

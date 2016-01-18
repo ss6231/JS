@@ -1,0 +1,19 @@
+<h3>Settings</h3>
+<body>
+	<p>Only show me birds that have been seen this <span style = "color: red">many times</span> </p>
+	<br>
+	<form method="POST" action="settings">
+		<div>
+			{{#if value}}
+				<textarea name = "numSeen">{{value}}</textarea>
+			{{else}}
+				<textarea name = "numSeen"></textarea>
+			{{/if}}
+		</div>
+		<br>
+		<div><input name = "submit" type="submit" value = "Set it!"></div>
+	</form>
+	<br>
+	<br>
+	<a style = "color: yellow" href = "/birds"> (Back to Birds) </a>
+</body>
