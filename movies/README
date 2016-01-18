@@ -1,0 +1,1 @@
+Uses mongoDB to store and display different movie titles with their respective year of release and director. Users can also filter by director name.

@@ -1,0 +1,1 @@
+This express app uses MongoDB/Mongoose API to create shopping lists where users can check off items and add additional items. 
